@@ -1,20 +1,51 @@
-<div class="form-group col-6">
-  <label for="">Title</label>
-  <input type="text"  class="form-control">
-  <label for="">Last name</label>
-  <input type="text"  class="form-control">
-  <label for="">First name</label>
-  <input type="text"  class="form-control">
-  <label for="">Summary</label>
-  <input type="text"  class="form-control">
-  <label for="">Category</label>
-  <input type="text"  class="form-control">
-  <label for="">Published date</label>
-  <input type="text"  class="form-control">
-  <label for="">Publisher</label>
-  <input type="text"  class="form-control">
-  <label for="">Pages</label>
-  <input type="text"  class="form-control">
-  <label for="">ISBN</label>
-  <input type="text"  class="form-control">
+<div class="form-group col-6 card mx-auto mb-3 mt-3">
+  <div class="card-body">
+    <form [formGroup]="newBookForm">
+    <h1 class="mb-3 mt-3">New book</h1>
+
+    <label for="">Title</label>
+    <input type="text" formControlName="title" class="form-control">
+
+    <label for="">Last name only</label>
+    <input type="checkbox" class="form-control">
+
+    <div class="row">
+      <div class="col-6">
+        <label for="">Last name</label>
+        <input type="text" formControlName="lastName" class="form-control">
+      </div>
+
+      <div class="col-6">
+        <label for="">First name</label>
+        <input type="text" formControlName="firstName" class="form-control">
+      </div>
+    </div>
+
+    <label for="">Summary</label>
+    <input type="text" formControlName="summary" class="form-control">
+
+    <label for="">Category</label>
+    <input type="text" formControlName="category" class="form-control">
+
+    <div class="row">
+      <div class="col-6">
+        <label for="">Published date</label>
+        <input type="text" formControlName="publishedDate" class="form-control">
+      </div>
+
+      <div class="col-6">
+        <label for="">Publisher</label>
+        <input type="text" formControlName="publisher" class="form-control">
+      </div>
+    </div>
+
+    <label for="">Pages</label>
+    <input type="text" formControlName="pages" class="form-control">
+
+    <label for="">ISBN</label>
+    <input type="text" formControlName="isbn" class="form-control">
+
+    <button class="btn btn-primary mt-3">Save</button>
+  </form>
+  </div>
 </div>
